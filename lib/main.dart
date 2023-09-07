@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.light().copyWith(
-        primaryColor: Color.purple[800],
+        primarywwColor: Color.purple[800],
       ),
       home: const MyHomassdePage(title: 'Flutter Demo Home Page'),
     );
