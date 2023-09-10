@@ -14,20 +14,57 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+
+
 class _HomePageState extends State<HomePage> {
   int currentPageIndex = 0;
+  late String _title;
+
+  @override
+  void initState() {
+    super.initState();
+    _title = 'Hello User';
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text("Hello User"),
+        title: Text(_title),
       ),
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (int index) {
+          if (currentPageIndex == index) return;
           setState(() {
             currentPageIndex = index;
+            switch (index) {
+              case 0:
+                {
+                  _title = 'Hello User';
+                }
+                break;
+              case 1:
+                {
+                  _title = 'Radio';
+                }
+                break;
+              case 2:
+                {
+                  _title = 'Search';
+                }
+                break;
+              case 3:
+                {
+                  _title = 'My Library';
+                }
+                break;
+              case 4:
+                {
+                  _title = 'Profile';
+                }
+                break;
+            }
           });
         },
         indicatorColor: Colors.amber[800],
