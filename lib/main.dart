@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'features/radio/ui/radio_list_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,9 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.purple[800],
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'UA Podcasts',),
+      home: const MyHomePage(
+        title: 'UA Podcasts',
+      ),
     );
   }
 }
@@ -32,21 +35,51 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int currentPageIndex = 0;
+  late String _title;
+
+  @override
+  void initState() {
+    super.initState();
+    _title = 'UA Podcasts';
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        title: Text(_title),
       ),
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (int index) {
+          if (currentPageIndex == index) return;
           setState(() {
             currentPageIndex = index;
+            switch (index) {
+              case 0:
+                {
+                  _title = 'UA Podcasts';
+                }
+                break;
+              case 1:
+                {
+                  _title = 'Podcasts';
+                }
+                break;
+              case 2:
+                {
+                  _title = 'Online Radio';
+                }
+                break;
+              case 3:
+                {
+                  _title = 'Settings';
+                }
+                break;
+            }
           });
         },
-        indicatorColor: Colors.amber[800],
+        indicatorColor: Colors.black,
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(
@@ -84,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           color: Colors.green,
           alignment: Alignment.center,
-          child: const Text('Radio'),
+          child: const RadioListWidget(),
         ),
         Container(
           color: Colors.blue,
