@@ -27,21 +27,19 @@ class _RadioListWidgetState extends State<RadioListWidget> {
             controller: _searchController,
             decoration: InputDecoration(
               hintText: 'Пошук станції ...',
-              suffixIcon:
-                  IconButton(icon: const Icon(Icons.clear), onPressed: () {}),
-              prefixIcon: IconButton(
+              suffixIcon: IconButton(
                 icon: const Icon(Icons.search),
                 onPressed: () {},
               ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(40.0),
+                borderRadius: BorderRadius.circular(16.0),
                 borderSide: const BorderSide(
                   color: Colors.black,
-                  width: 3,
+                  width: 2,
                 ),
               ),
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(40.0),
+                borderRadius: BorderRadius.circular(16.0),
               ),
             ),
           ),
@@ -55,65 +53,96 @@ class _RadioListWidgetState extends State<RadioListWidget> {
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
               children: <Widget>[
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[100],
-                  child: const Text("He'd have you all unravel at the"),
+                Column(
+                  children: [
+                    Image.network('https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                    // const Text('Kiss FM'),
+                  ],
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[200],
-                  child: const Text('Heed not the rabble'),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                    // const Text('Kiss FM Ukrainian'),
+                  ],
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[300],
-                  child: const Text('Sound of screams but the'),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[400],
-                  child: const Text('Who scream'),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[500],
-                  child: const Text('Revolution is coming...'),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[600],
-                  child: const Text('Revolution, they...'),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[100],
-                  child: const Text("He'd have you all unravel at the"),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[200],
-                  child: const Text('Heed not the rabble'),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[300],
-                  child: const Text('Sound of screams but the'),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[400],
-                  child: const Text('Who scream'),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[500],
-                  child: const Text('Revolution is coming...'),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[600],
-                  child: const Text('Revolution, they...'),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Image.network(
+                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                  ],
                 ),
               ],
             ),
