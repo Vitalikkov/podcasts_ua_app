@@ -8,7 +8,7 @@ class RadioListWidget extends StatefulWidget {
 }
 
 class _RadioListWidgetState extends State<RadioListWidget> {
-  final _searchController = TextEditingController();
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void dispose() {
@@ -18,12 +18,100 @@ class _RadioListWidgetState extends State<RadioListWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16),
+    return Container(
+      padding: const EdgeInsets.all(8),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           TextField(
             controller: _searchController,
+            decoration: InputDecoration(
+              hintText: 'Пошук станції ...',
+              suffixIcon:
+                  IconButton(icon: const Icon(Icons.clear), onPressed: () {}),
+              prefixIcon: IconButton(
+                icon: const Icon(Icons.search),
+                onPressed: () {},
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(40.0),
+                borderSide: const BorderSide(
+                  color: Colors.black,
+                  width: 3,
+                ),
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(40.0),
+              ),
+            ),
+          ),
+          GridView.count(
+            crossAxisCount: 2,
+            padding: const EdgeInsets.all(10.0),
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+            children: <Widget>[
+              Container(
+                padding: const EdgeInsets.all(8),
+                color: Colors.teal[100],
+                child: const Text("He'd have you all unravel at the"),
+              ),
+              Container(
+                padding: const EdgeInsets.all(8),
+                color: Colors.teal[200],
+                child: const Text('Heed not the rabble'),
+              ),
+              Container(
+                padding: const EdgeInsets.all(8),
+                color: Colors.teal[300],
+                child: const Text('Sound of screams but the'),
+              ),
+              Container(
+                padding: const EdgeInsets.all(8),
+                color: Colors.teal[400],
+                child: const Text('Who scream'),
+              ),
+              Container(
+                padding: const EdgeInsets.all(8),
+                color: Colors.teal[500],
+                child: const Text('Revolution is coming...'),
+              ),
+              Container(
+                padding: const EdgeInsets.all(8),
+                color: Colors.teal[600],
+                child: const Text('Revolution, they...'),
+              ),
+              Container(
+                padding: const EdgeInsets.all(8),
+                color: Colors.teal[100],
+                child: const Text("He'd have you all unravel at the"),
+              ),
+              Container(
+                padding: const EdgeInsets.all(8),
+                color: Colors.teal[200],
+                child: const Text('Heed not the rabble'),
+              ),
+              Container(
+                padding: const EdgeInsets.all(8),
+                color: Colors.teal[300],
+                child: const Text('Sound of screams but the'),
+              ),
+              Container(
+                padding: const EdgeInsets.all(8),
+                color: Colors.teal[400],
+                child: const Text('Who scream'),
+              ),
+              Container(
+                padding: const EdgeInsets.all(8),
+                color: Colors.teal[500],
+                child: const Text('Revolution is coming...'),
+              ),
+              Container(
+                padding: const EdgeInsets.all(8),
+                color: Colors.teal[600],
+                child: const Text('Revolution, they...'),
+              ),
+            ],
           ),
         ],
       ),

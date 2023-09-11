@@ -6,14 +6,15 @@ class PodcastsUaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-        title: 'Podcasts UA',
-        theme: ThemeData(
-          fontFamily: 'Sailec',
-          primarySwatch: Colors.blue,
-          useMaterial3: true,
-        ),
-        home: const HomePage(),
-      );
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Podcasts UA',
+      theme: ThemeData(
+        fontFamily: 'Sailec',
+        primarySwatch: Colors.blue,
+        useMaterial3: true,
+      ),
+      home: const HomePage(),
+    );
   }
 }
