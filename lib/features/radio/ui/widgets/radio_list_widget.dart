@@ -48,102 +48,426 @@ class _RadioListWidgetState extends State<RadioListWidget> {
           child: Padding(
             padding: const EdgeInsets.only(top: 16, left: 8, right: 8),
             child: GridView.count(
-              crossAxisCount: 2,
+              crossAxisCount: 3,
               padding: const EdgeInsets.all(10.0),
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
               children: <Widget>[
-                Column(
-                  children: [
-                    Image.network('https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                    // const Text('Kiss FM'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                    // const Text('Kiss FM Ukrainian'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Image.network(
-                        'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                  ],
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
                 ),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
+                ),
+
               ],
             ),
           ),
