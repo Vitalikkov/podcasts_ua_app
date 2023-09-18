@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int currentPageIndex = 0;
+  int currentPageIndex = 1;
   late String _title;
 
   @override
@@ -36,6 +36,10 @@ class _HomePageState extends State<HomePage> {
               ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Немає нових повідомлень')));
             },
+          ),
+          IconButton(
+            icon: const Icon(Icons.more_vert),
+            onPressed: () {},
           ),
         ],
       ),

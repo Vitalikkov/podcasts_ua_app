@@ -48,7 +48,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
           child: Padding(
             padding: const EdgeInsets.only(top: 16, left: 8, right: 8),
             child: GridView.count(
-              crossAxisCount: 3,
+              crossAxisCount: 2,
               padding: const EdgeInsets.all(10.0),
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
@@ -64,8 +64,41 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                       ),
                     ],
                     color: Colors.white,
+                    border: Border.all(color: Colors.black.withOpacity(0.2)),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: const [
+                      BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 5,
+                          spreadRadius: 1,
+                          offset: Offset(4, 4)
+                      ),
+                    ],
+                    color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -100,7 +133,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -135,7 +168,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -170,7 +203,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -205,7 +238,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -240,7 +273,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -275,7 +308,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -310,7 +343,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -345,7 +378,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -380,7 +413,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -415,7 +448,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -450,7 +483,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -485,7 +518,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -520,7 +553,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -555,7 +588,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -590,7 +623,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -625,7 +658,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -660,7 +693,7 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ],
                     color: Colors.white,
                     border: Border.all(
-                      width: 2,
+                      width: 0,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -683,6 +716,182 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     ),
                   ),
                 ),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: const [
+                      BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 5,
+                          spreadRadius: 1,
+                          offset: Offset(4, 4)
+                      ),
+                    ],
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 0,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: const [
+                      BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 5,
+                          spreadRadius: 1,
+                          offset: Offset(4, 4)
+                      ),
+                    ],
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 0,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: const [
+                      BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 5,
+                          spreadRadius: 1,
+                          offset: Offset(4, 4)
+                      ),
+                    ],
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 0,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: const [
+                      BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 5,
+                          spreadRadius: 1,
+                          offset: Offset(4, 4)
+                      ),
+                    ],
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 0,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: const [
+                      BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 5,
+                          spreadRadius: 1,
+                          offset: Offset(4, 4)
+                      ),
+                    ],
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 0,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                                'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        const Text('Kiss FM'),
+                      ],
+                    ),
+                  ),
+                ),
+
               ],
             ),
           ),
