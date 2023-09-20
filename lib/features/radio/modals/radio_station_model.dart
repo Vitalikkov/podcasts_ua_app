@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
-class RadioStationDetails extends Equatable {
-  const RadioStationDetails({
+class RadioStationModel extends Equatable {
+  const RadioStationModel({
     required this.id,
     required this.stationName,
     required this.stationUrl,
