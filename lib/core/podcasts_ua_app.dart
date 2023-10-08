@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:podcasts_ua_app/core/ui/home_page.dart';
 
@@ -7,13 +6,15 @@ class PodcastsUaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          useMaterial3: true,
-        ),
-        home: const HomePage(),
-      );
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Podcasts UA',
+      theme: ThemeData(
+        fontFamily: 'Sailec',
+        primarySwatch: Colors.blue,
+        useMaterial3: true,
+      ),
+      home: const HomePage(),
+    );
   }
 }
