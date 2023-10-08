@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:podcasts_ua_app/features/radio/ui/widgets/radio_list_widget.dart';
 
 class RadioPage extends StatelessWidget {
   const RadioPage({Key? key}) : super(key: key);
@@ -6,9 +7,8 @@ class RadioPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
       alignment: Alignment.center,
-      child: const Text('Radio page'),
+      child: const RadioListWidget(),
     );
   }
 }
