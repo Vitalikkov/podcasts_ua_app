@@ -58,7 +58,8 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const RadioCard()),
+                      // MaterialPageRoute(builder: (context) => const RadioCard()),
+                      MaterialPageRoute(builder: (context) => const AudioPlayerScreen(title: '',)),
                     );
                   },
                   child: Container(

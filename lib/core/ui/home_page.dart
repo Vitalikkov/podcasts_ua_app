@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: const Color.fromRGBO(255, 148, 214, 1),
         title: Text(_title),
         actions: <Widget>[
           IconButton(
@@ -78,6 +78,7 @@ class _HomePageState extends State<HomePage> {
           });
         },
         indicatorColor: Colors.black,
+        backgroundColor: const Color.fromRGBO(152, 239, 250, 1),
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(

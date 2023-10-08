@@ -43,6 +43,11 @@ dev_dependencies:
   json_serializable: ^6.7.1
   build_runner: ^2.4.6
   url_launcher: ^6.1.14
+  cached_network_image: ^3.2.3
+  audio_video_progress_bar: ^2.0.0
+  rxdart: ^0.27.7
+  just_audio: ^0.9.35
+  just_audio_background: ^0.0.1-beta.10
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
