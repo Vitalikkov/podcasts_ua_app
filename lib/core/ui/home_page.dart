@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:podcasts_ua_app/features/podcasts/ui/podcasts_page.dart';
 import 'package:podcasts_ua_app/features/radio/ui/radio_page.dart';
 
@@ -13,8 +14,10 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+
+
 class _HomePageState extends State<HomePage> {
-  int currentPageIndex = 1;
+  int currentPageIndex = 0;
   late String _title;
 
   @override
@@ -27,21 +30,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(255, 148, 214, 1),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(_title),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.notifications_none),
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Немає нових повідомлень')));
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.more_vert),
-            onPressed: () {},
-          ),
-        ],
       ),
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (int index) {
@@ -77,43 +67,42 @@ class _HomePageState extends State<HomePage> {
             }
           });
         },
-        indicatorColor: Colors.black,
-        backgroundColor: const Color.fromRGBO(152, 239, 250, 1),
+        indicatorColor: Colors.amber[800],
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(
-            selectedIcon: Icon(Icons.home, color: Colors.white),
+            selectedIcon: Icon(Icons.home),
             icon: Icon(Icons.home_outlined),
             label: 'Home',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.radio, color: Colors.white),
+            selectedIcon: Icon(Icons.radio),
             icon: Icon(Icons.radio_outlined),
             label: 'Radio',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.search, color: Colors.white),
+            selectedIcon: Icon(Icons.search),
             icon: Icon(Icons.search_outlined),
             label: 'Search',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.playlist_play, color: Colors.white),
+            selectedIcon: Icon(Icons.playlist_play),
             icon: Icon(Icons.playlist_play_outlined),
             label: 'My library',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.person, color: Colors.white),
+            selectedIcon: Icon(Icons.person),
             icon: Icon(Icons.person_outline_outlined),
             label: 'Settings',
           ),
         ],
       ),
       body: <Widget>[
-        const PodcastsPage(),
-        const RadioPage(),
-        const SearchPage(),
-        const MyLibraryPage(),
-        const ProfilePage(),
+        PodcastsPage(),
+        RadioPage(),
+        SearchPage(),
+        MyLibraryPage(),
+        ProfilePage(),
       ][currentPageIndex],
     );
   }

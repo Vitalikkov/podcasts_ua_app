@@ -1,13 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:podcasts_ua_app/core/podcasts_ua_app.dart';
-import 'package:just_audio_background/just_audio_background.dart';
-
+import 'package:podcasts_ua_app/firebase_options.dart';
 
 Future<void> main() async {
-  await JustAudioBackground.init(
-    androidNotificationChannelId: 'com.podcastua',
-    androidNotificationChannelName: 'Podcast UA',
-    androidNotificationOngoing: true,
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const PodcastsUaApp());
 }
+
+
