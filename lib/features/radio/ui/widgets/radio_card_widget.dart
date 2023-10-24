@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:just_audio_background/just_audio_background.dart';
+    import 'package:just_audio_background/just_audio_background.dart';
 
 class AudioPlayerScreen extends StatefulWidget {
   const AudioPlayerScreen({super.key, required this.title});
@@ -182,7 +182,7 @@ class MediaMetaData extends StatelessWidget {
         Text(
           title,
           style: const TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontSize: 22,
             fontWeight: FontWeight.bold,
           ),
@@ -192,7 +192,7 @@ class MediaMetaData extends StatelessWidget {
         Text(
           artist,
           style: const TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontSize: 20,
           ),
           textAlign: TextAlign.center,
@@ -215,7 +215,7 @@ class Controls extends StatelessWidget {
         IconButton(
           onPressed: audioPlayer.seekToPrevious,
           iconSize: 60,
-          color: Colors.white,
+          color: Colors.black,
           icon: const Icon(
             Icons.skip_previous_rounded,
           ),
@@ -230,7 +230,7 @@ class Controls extends StatelessWidget {
               return IconButton(
                 onPressed: audioPlayer.play,
                 iconSize: 80,
-                color: Colors.white,
+                color: Colors.black,
                 icon: const Icon(Icons.play_arrow_rounded),
               );
             } else if (processingState != ProcessingState.completed) {
@@ -238,20 +238,20 @@ class Controls extends StatelessWidget {
                 onPressed: audioPlayer.pause,
                 iconSize: 80,
                 icon: const Icon(Icons.pause_rounded),
-                color: Colors.white,
+                color: Colors.black,
               );
             }
             return const Icon(
               Icons.play_arrow_rounded,
               size: 80,
-              color: Colors.white,
+              color: Colors.black,
             );
           },
         ),
         IconButton(
           onPressed: audioPlayer.seekToNext,
           iconSize: 60,
-          color: Colors.white,
+          color: Colors.black,
           icon: const Icon(
             Icons.skip_next_rounded,
           ),
