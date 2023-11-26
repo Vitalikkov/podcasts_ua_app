@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:podcasts_ua_app/features/radio/ui/widgets/radio_card_widget.dart';
+import 'package:podcasts_ua_app/core/network/services/radio_station_service.dart';
+import 'package:podcasts_ua_app/features/radio/modals/radio_station_model.dart';
+import 'package:podcasts_ua_app/features/radio/ui/widgets/radio_station_list.dart';
 
 class RadioListWidget extends StatefulWidget {
   const RadioListWidget({super.key});
@@ -10,6 +12,7 @@ class RadioListWidget extends StatefulWidget {
 
 class _RadioListWidgetState extends State<RadioListWidget> {
   final TextEditingController _searchController = TextEditingController();
+  final RadioStationService service = RadioStationService();
 
   @override
   void dispose() {
@@ -48,55 +51,21 @@ class _RadioListWidgetState extends State<RadioListWidget> {
         Expanded(
           child: Padding(
             padding: const EdgeInsets.only(top: 16, left: 8, right: 8),
-            child: GridView.count(
-              crossAxisCount: 2,
-              padding: const EdgeInsets.all(10.0),
-              mainAxisSpacing: 10,
-              crossAxisSpacing: 10,
-              children: <Widget>[
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      // MaterialPageRoute(builder: (context) => const RadioCard()),
-                      MaterialPageRoute(builder: (context) => const AudioPlayerScreen(title: '',)),
-                    );
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      boxShadow: const [
-                        BoxShadow(
-                            color: Colors.grey,
-                            blurRadius: 5,
-                            spreadRadius: 1,
-                            offset: Offset(4, 4)
-                        ),
-                      ],
-                      color: Colors.white,
-                      border: Border.all(color: Colors.black.withOpacity(0.2)),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: <Widget>[
-                          Expanded(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(12),
-                              child: Image.network(
-                                  'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png'),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 4,
-                          ),
-                          const Text('Kiss FM'),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+            child: FutureBuilder<List<RadioStationModel>>(
+              future: service.fetchRadioStations(),
+              builder: (context, snapshot) {
+                if (snapshot.hasError) {
+                  return const Center(
+                    child: Text('An error has occurred!'),
+                  );
+                } else if (snapshot.hasData) {
+                  return RadioStationList(radioStations: snapshot.data!);
+                } else {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+              },
             ),
           ),
         ),

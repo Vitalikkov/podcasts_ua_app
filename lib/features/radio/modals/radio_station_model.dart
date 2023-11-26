@@ -15,9 +15,18 @@ class RadioStationModel extends Equatable {
 
   @override
   List<Object?> get props => [
-    id,
-    stationName,
-    stationUrl,
-    stationImageUrl,
-  ];
+        id,
+        stationName,
+        stationUrl,
+        stationImageUrl,
+      ];
+
+  factory RadioStationModel.fromJson(Map<String, dynamic> json) {
+    return RadioStationModel(
+      id: json['id'] as int,
+      stationName: json['name'] as String,
+      stationUrl: json['stream_url'] as String,
+      stationImageUrl: json['avatar_url'] as String,
+    );
+  }
 }
