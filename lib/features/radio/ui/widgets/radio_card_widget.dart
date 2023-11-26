@@ -1,12 +1,20 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-    import 'package:just_audio_background/just_audio_background.dart';
+import 'package:just_audio_background/just_audio_background.dart';
+import 'package:podcasts_ua_app/features/radio/modals/radio_station_model.dart';
 
 class AudioPlayerScreen extends StatefulWidget {
-  const AudioPlayerScreen({super.key, required this.title});
+  const AudioPlayerScreen({
+    super.key,
+    required this.title,
+    required this.stations,
+    required this.index,
+  });
 
   final String title;
+  final List<RadioStationModel> stations;
+  final int index;
 
   @override
   State<AudioPlayerScreen> createState() => _AudioPlayerScreenState();
@@ -14,74 +22,32 @@ class AudioPlayerScreen extends StatefulWidget {
 
 class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
   late AudioPlayer _audioPlayer;
-
-  final _playList = ConcatenatingAudioSource(
-    children: [
-      AudioSource.uri(
-        Uri.parse(
-          'https://online.kissfm.ua/KissFM_HD',
-        ),
-        tag: MediaItem(
-          id: '0',
-          artist: 'Kiss FM',
-          title: 'Online',
-          artUri: Uri.parse(
-            'https://play.tavr.media/static/image/kissfm/100x100.jpg',
-          ),
-        ),
-      ),
-      AudioSource.uri(
-        Uri.parse(
-          'https://online.kissfm.ua/KissFM_Ukr_HD',
-        ),
-        tag: MediaItem(
-          id: '1',
-          artist: 'Kiss FM',
-          title: 'Ukrainian',
-          artUri: Uri.parse(
-            'https://play.tavr.media/static/image/header_menu/kiss_ukrainian_210x210.png',
-          ),
-        ),
-      ),
-      AudioSource.uri(
-        Uri.parse(
-          'https://online.kissfm.ua/KissFM_Deep',
-        ),
-        tag: MediaItem(
-          id: '2',
-          artist: 'Kiss FM',
-          title: 'Deep',
-          artUri: Uri.parse(
-            'https://play.tavr.media/static/image/header_menu/kiss_deep_210x210.png',
-          ),
-        ),
-      ),
-      AudioSource.uri(
-        Uri.parse(
-          'https://online.kissfm.ua/KissFM_Digital_HD',
-        ),
-        tag: MediaItem(
-          id: '3',
-          artist: 'Kiss FM',
-          title: 'Digital',
-          artUri: Uri.parse(
-            'https://play.tavr.media/static/image/header_menu/kiss_digital_210x210.png',
-          ),
-        ),
-      ),
-    ],
-  );
+  late ConcatenatingAudioSource _playList;
 
   @override
   void initState() {
     super.initState();
     _audioPlayer = AudioPlayer();
+    _playList = ConcatenatingAudioSource(
+        children: widget.stations
+            .map((station) => AudioSource.uri(
+                  Uri.parse(station.stationUrl),
+                  tag: MediaItem(
+                    id: station.id.toString(),
+                    artist: station.stationName,
+                    title: station.stationName,
+                    artUri: Uri.parse(station.stationImageUrl),
+                  ),
+                ))
+            .toList());
+
     _init();
   }
 
   Future<void> _init() async {
     await _audioPlayer.setLoopMode(LoopMode.all);
     await _audioPlayer.setAudioSource(_playList);
+    await _audioPlayer.seek(Duration.zero, index: widget.index);
   }
 
   @override

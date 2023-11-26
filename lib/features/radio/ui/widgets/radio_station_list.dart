@@ -25,8 +25,10 @@ class RadioStationList extends StatelessWidget {
               context,
               // MaterialPageRoute(builder: (context) => const RadioCard()),
               MaterialPageRoute(
-                  builder: (context) => const AudioPlayerScreen(
-                        title: '',
+                  builder: (context) => AudioPlayerScreen(
+                        title: radioStations[index].stationName,
+                        stations: radioStations,
+                        index: index,
                       )),
             );
           },
