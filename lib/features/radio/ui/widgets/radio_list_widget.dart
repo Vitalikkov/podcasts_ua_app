@@ -15,6 +15,14 @@ class _RadioListWidgetState extends State<RadioListWidget> {
   final RadioStationService service = RadioStationService();
 
   @override
+  void initState() {
+    _searchController.addListener(() {
+      setState(() {});
+    });
+    super.initState();
+  }
+
+  @override
   void dispose() {
     _searchController.dispose();
     super.dispose();
@@ -59,7 +67,15 @@ class _RadioListWidgetState extends State<RadioListWidget> {
                     child: Text('An error has occurred!'),
                   );
                 } else if (snapshot.hasData) {
-                  return RadioStationList(radioStations: snapshot.data!);
+                  return RadioStationList(
+                    radioStations: snapshot.data!
+                        .where(
+                          (element) => element.stationName
+                              .toLowerCase()
+                              .contains(_searchController.text.toLowerCase()),
+                        )
+                        .toList(),
+                  );
                 } else {
                   return const Center(
                     child: CircularProgressIndicator(),
